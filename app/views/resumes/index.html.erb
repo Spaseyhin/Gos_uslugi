@@ -1,0 +1,20 @@
+<h1>Диагностика</h1>
+<table class = "table table-bordered table-striped">
+
+    <% @resumes.reverse.each do |resume| %>
+    	<div class="row">
+        	<div class="col-3">
+         		<p>ФИО: <%= resume.fio %></p>
+         		<p>Телефон: <%=resume.phone %></p>
+         		<p>Адрес: <%=resume.addres %></p>
+            </div>
+            <div class="col-3"></div>
+         	<div class="col-3">
+            	<p>Коментарий: <%= resume.comment %></p>
+            	<%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger"%>
+			</div>
+    	</div>
+        <hr>
+      <% end %>
+   </tbody>
+</table>
