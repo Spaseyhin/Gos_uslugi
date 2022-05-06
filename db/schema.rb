@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2022_05_05_173028) do
 
   create_table "resumes", force: :cascade do |t|
-    t.integer "phone"
+    t.string "phone"
     t.string "addres"
     t.string "comment"
     t.string "spesc"
