@@ -4,7 +4,7 @@
 <div class = "well">
    <%= form_for @resume, html: { multipart: true } do |f| %>
       
-      <%= f.number_field :phone, placeholder: "Телефон", class: "form-control input_new_pos "%>
+      <%= f.text_field :phone, placeholder: "Телефон", class: "form-control input_new_pos "%>
       <%= f.text_field :addres, placeholder: "Адрес", class: "form-control input_new_pos "%>
 
       <%= f.text_field :fio, placeholder: "ФИО", class: "form-control input_new_pos " %>
