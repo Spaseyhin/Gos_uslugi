@@ -30,3 +30,4 @@ class ResumesController < ApplicationController
    end
    
 end
+
