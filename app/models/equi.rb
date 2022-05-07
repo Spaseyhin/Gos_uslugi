@@ -1,0 +1,2 @@
+class Equi < ApplicationRecord
+end

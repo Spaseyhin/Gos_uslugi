@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'equis/index'
+  get 'equis/new'
+  get 'equis/create'
+  get 'equis/destroy'
   get 'repairs/index'
   get 'repairs/new'
   get 'repairs/create'
@@ -23,8 +27,10 @@ Rails.application.routes.draw do
   get 'resumes/specialists'
   get 'resumes/read'
   get 'repairs/index'
+  get 'equi/index'
   root "resumes#main"
   
+  resources :equis, only: [:index, :new, :create, :destroy]
   resources :repairs, only: [:index, :new, :create, :destroy]
   resources :resumes, only: [:index, :new, :create, :destroy]
   resources :users
