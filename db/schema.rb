@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_07_193551) do
+ActiveRecord::Schema.define(version: 2022_05_11_152349) do
+
+  create_table "electrics", force: :cascade do |t|
+    t.string "phone"
+    t.string "addres"
+    t.string "comment"
+    t.string "fio"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "equipment_installations", force: :cascade do |t|
     t.integer "phone"
@@ -22,6 +31,15 @@ ActiveRecord::Schema.define(version: 2022_05_07_193551) do
   end
 
   create_table "equis", force: :cascade do |t|
+    t.string "phone"
+    t.string "addres"
+    t.string "comment"
+    t.string "fio"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "leaks", force: :cascade do |t|
     t.string "phone"
     t.string "addres"
     t.string "comment"

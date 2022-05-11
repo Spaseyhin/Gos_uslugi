@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'electrics/index'
+  get 'electrics/new'
+  get 'electrics/create'
+  get 'electrics/destroy'
   get 'equis/index'
   get 'equis/new'
   get 'equis/create'
@@ -23,16 +27,14 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
-  get 'resumes/index'
   get 'resumes/specialists'
   get 'resumes/read'
-  get 'repairs/index'
-  get 'equi/index'
   root "resumes#main"
-  
+  resources :electrics, only: [:index, :new, :create, :destroy]
   resources :equis, only: [:index, :new, :create, :destroy]
   resources :repairs, only: [:index, :new, :create, :destroy]
   resources :resumes, only: [:index, :new, :create, :destroy]
+  resources :leaks, only: [:index, :new, :create, :destroy]
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

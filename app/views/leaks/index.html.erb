@@ -1,0 +1,21 @@
+<% provide(:title, 'Ремонт') %>
+<h1>Устранение протечки</h1>
+<table class = "table table-bordered table-striped">
+
+    <% @leaks.reverse.each do |leak| %>
+    	<div class="row">
+        	<div class="col-3">
+         		<p>ФИО: <%= leak.fio %></p>
+         		<p>Телефон: <%=leak.phone %></p>
+         		<p>Адрес: <%=leak.addres %></p>
+            </div>
+            <div class="col-3"></div>
+         	<div class="col-3">
+            	<p>Коментарий: <%= leak.comment %></p>
+            	<%= button_to "Delete",  leak, method: :delete, class: "btn btn-danger"%>
+			</div>
+    	</div>
+        <hr>
+      <% end %>
+   </tbody>
+</table>

@@ -1,0 +1,18 @@
+<% provide(:title, 'Создать заявку') %>
+<center>
+<h1>Создать заявку</h1>
+
+<div class = "well">
+   <%= form_for @leak, html: { multipart: true } do |f| %>
+      
+      <%= f.text_field :phone, placeholder: "Телефон", class: "form-control input_new_pos "%>
+      <%= f.text_field :addres, placeholder: "Адрес", class: "form-control input_new_pos "%>
+
+      <%= f.text_field :fio, placeholder: "ФИО", class: "form-control input_new_pos " %>
+
+      <%= f.text_area :comment, class: "form-control input_new_pos ",placeholder: "Коментарий",rows: 7%>
+<br/>
+      <%= f.submit "Опубликовать", class: "btn btn-primary" %>
+   <% end %>
+</div>
+</center>

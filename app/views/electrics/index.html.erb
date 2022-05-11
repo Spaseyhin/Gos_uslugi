@@ -1,0 +1,21 @@
+<% provide(:title, 'Ремонт') %>
+<h1>Устранение перебоев электросети</h1>
+<table class = "table table-bordered table-striped">
+
+    <% @electrics.reverse.each do |electric| %>
+    	<div class="row">
+        	<div class="col-3">
+         		<p>ФИО: <%= electric.fio %></p>
+         		<p>Телефон: <%=electric.phone %></p>
+         		<p>Адрес: <%=electric.addres %></p>
+            </div>
+            <div class="col-3"></div>
+         	<div class="col-3">
+            	<p>Коментарий: <%= electric.comment %></p>
+            	<%= button_to "Delete",  electric, method: :delete, class: "btn btn-danger"%>
+			</div>
+    	</div>
+        <hr>
+      <% end %>
+   </tbody>
+</table>
