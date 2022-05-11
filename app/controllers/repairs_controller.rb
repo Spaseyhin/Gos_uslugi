@@ -24,7 +24,7 @@ class RepairsController < ApplicationController
    def destroy
       @repair = Repair.find(params[:id])
       @repair.destroy
-      redirect_to resumes_path, notice:  "Обьявление удалено"
+      redirect_to root, notice:  "Обьявление удалено"
    end
    
    private
