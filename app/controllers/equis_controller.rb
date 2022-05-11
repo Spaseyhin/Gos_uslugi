@@ -24,7 +24,7 @@ class EquisController < ApplicationController
    def destroy
       @equi = Equi.find(params[:id])
       @equi.destroy
-      redirect_to root, notice:  "Обьявление удалено"
+      redirect_to equis_path , notice:  "Обьявление удалено"
    end
    
    private

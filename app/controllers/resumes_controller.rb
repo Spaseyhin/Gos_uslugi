@@ -21,7 +21,7 @@ class ResumesController < ApplicationController
    def destroy
       @resume = Resume.find(params[:id])
       @resume.destroy
-      redirect_to root, notice:  "Обьявление удалено"
+      redirect_to resumes_path, notice:  "Обьявление удалено"
    end
    
    private
