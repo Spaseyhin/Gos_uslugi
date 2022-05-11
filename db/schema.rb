@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2022_05_07_193551) do
   end
 
   create_table "equis", force: :cascade do |t|
-    t.integer "phone"
+    t.string "phone"
     t.string "addres"
     t.string "comment"
     t.string "fio"
