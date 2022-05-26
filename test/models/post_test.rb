@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class RepairTest < ActiveSupport::TestCase
+class PostTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
