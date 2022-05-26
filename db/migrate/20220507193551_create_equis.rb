@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateEquis < ActiveRecord::Migration[6.1]
   def change
     create_table :equis do |t|

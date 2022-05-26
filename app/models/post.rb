@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
-class Repair < ApplicationRecord
+class Post < ApplicationRecord
 end

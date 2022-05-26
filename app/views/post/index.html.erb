@@ -1,0 +1,19 @@
+<% provide(:title, 'Диагностика') %>
+<h1>Вызовы</h1>
+<table class = "table table-bordered table-striped">
+
+    <% @post.reverse.each do |post| %>
+    	<div class="row">
+        	
+         		<p>Специальность: <%= post.title %></p>
+         		<p>Данные: <%=post.content %></p>
+         		<p>Работник: <%=post.worker %></p>
+            </div>
+            
+
+			</div>
+    	</div>
+        <hr>
+      <% end %>
+   </tbody>
+</table>

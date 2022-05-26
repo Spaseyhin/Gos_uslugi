@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if user&.authenticate(params[:session][:password])
       log_in user
       remember user
-      redirect_to resumes_specialists_path
+      redirect_to post_index_path
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
